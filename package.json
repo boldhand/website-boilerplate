@@ -1,0 +1,16 @@
+{
+  "name": "site-name",
+  "version": "0.1.0",
+  "author": "Joseph Michel",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*",
+    "node-bourbon": "^1.2.3",
+    "node-neat": "^1.4.2"
+  }
+}
