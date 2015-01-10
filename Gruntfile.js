@@ -72,10 +72,20 @@ module.exports = function(grunt){
                     'js/min/plugins.min.js': ['js/plugins.js']
                 }
             }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: '.',
+                }
+            }
         }
 
     });
 
-    grunt.registerTask('default', []);
+    /*grunt.registerTask('default', []);*/
+    grunt.registerTask('server', ['connect:server', 'watch']);
 
 };

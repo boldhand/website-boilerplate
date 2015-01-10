@@ -5,12 +5,14 @@
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.0",
-    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-htmlhint": "*",
+    "grunt-notify": "*",
     "matchdep": "*",
-    "node-bourbon": "^1.2.3",
-    "node-neat": "^1.4.2"
+    "node-bourbon": "*",
+    "node-neat": "*"
   }
 }
