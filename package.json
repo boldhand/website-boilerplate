@@ -10,7 +10,6 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-htmlhint": "*",
-    "grunt-notify": "*",
     "matchdep": "*",
     "node-bourbon": "*",
     "node-neat": "*"
