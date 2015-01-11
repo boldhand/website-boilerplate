@@ -1,3 +1,3 @@
 # Website Boilerplate...
 Start with npm install
-Grunt watch
+Grunt watch / grunt server
