@@ -5,6 +5,7 @@
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.0",
+    "grunt-autoprefixer": "^2.2.0",
     "grunt-contrib-connect": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",

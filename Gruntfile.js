@@ -65,6 +65,14 @@ module.exports = function(grunt){
             } 
         },
 
+        autoprefixer:{
+            dist:{
+                files:{
+                    'css/main.css':'css/main.css'
+                }
+            }
+        },
+
         uglify: {
             build: {
                 files: {
