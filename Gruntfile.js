@@ -58,6 +58,20 @@ module.exports = function (grunt) {
             }
         },
 		
+		imagemin: {
+			jpgs: {
+				options: {
+					progressive: true
+				},
+				files: [{
+					expand: true,
+					cwd: 'img/source',
+					src: ['*.jpg'],
+					dest: 'img/'
+				}]
+			}
+		},
+		
 		watch: {
             options: {
                 livereload: true

@@ -1,18 +1,19 @@
 {
-	"name": "site-name",
-	"version": "0.1.0",
-	"author": "Joseph Michel",
-	"private": true,
-	"devDependencies": {
-		"grunt": "*",
-	    "grunt-contrib-connect": "*",
-    	"grunt-contrib-sass": "*",
-    	"grunt-contrib-uglify": "*",
-    	"grunt-contrib-watch": "*",
-    	"grunt-htmlhint": "*",
-    	"matchdep": "*",
-    	"node-bourbon": "*",
-    	"node-neat": "*",
-		"grunt-autoprefixer": "*"
-	}
+  "name": "site-name",
+  "version": "0.1.0",
+  "author": "Joseph Michel",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*",
+    "node-bourbon": "*",
+    "node-neat": "*"
+  }
 }
