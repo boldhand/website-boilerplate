@@ -1,8 +1,11 @@
-module.exports = function(grunt){
+module.exports = function (grunt) {
+	
+	'use strict';
 
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
+		
         pkg: grunt.file.readJSON('package.json'),
 
         htmlhint: {
@@ -20,58 +23,31 @@ module.exports = function(grunt){
                     "img-alt-require": true,
                     "id-class-value": "dash",
                     "doctype-html5": true,
-                    "attr-value-not-empty": true,
+                    "attr-value-not-empty": true
                 },
                 src: ['*.html']
             }
-        },
-        watch: {
-            options: {
-                livereload: true,
-            },
-            html: {
-                files: ['*.html'],
-                tasks: ['htmlhint']
-            },
-            css: {
-                files: ['css/**/*.scss'],
-                tasks: ['sass'],
-                options: {
-                    spawn: false,
-                }
-            },
-            scripts: {
-                files: ['js/*.js'],
-                tasks: ['uglify'],
-                options: {
-                    spawn: false,
-                },
-            },
-            gruntfile: {
-                files: ['Gruntfile.js']
-            }, 
         },
 
         sass: {
             dist: {
                 options: {
                     style: 'compressed',
-                    loadPath: require('node-bourbon').includePaths,
                     loadPath: require('node-neat').includePaths
                 },
                 files: {
-                    'css/main.css': 'css/main.scss'
-                }
-            } 
-        },
-
-        autoprefixer:{
-            dist:{
-                files:{
-                    'css/main.css':'css/main.css'
+                    'css/main.css' : 'css/main.scss'
                 }
             }
         },
+
+        autoprefixer: {
+			dist: {
+				files: {
+					'css/main.css' : 'css/main.css'
+				}
+			}
+		},
 
         uglify: {
             build: {
@@ -81,19 +57,45 @@ module.exports = function(grunt){
                 }
             }
         },
+		
+		watch: {
+            options: {
+                livereload: true
+            },
+            html: {
+                files: ['*.html'],
+                tasks: ['htmlhint']
+            },
+            css: {
+                files: ['css/**/*.scss'],
+                tasks: ['sass', 'autoprefixer'],
+                options: {
+                    spawn: false
+                }
+            },
+            scripts: {
+                files: ['js/*.js'],
+                tasks: ['uglify'],
+                options: {
+                    spawn: false
+                }
+            },
+            gruntfile: {
+                files: ['Gruntfile.js']
+            }
+        },
 
         connect: {
             server: {
                 options: {
                     port: 8000,
-                    base: '.',
+                    base: '.'
                 }
             }
         }
 
     });
 
-    /*grunt.registerTask('default', []);*/
     grunt.registerTask('server', ['connect:server', 'watch']);
 
 };
