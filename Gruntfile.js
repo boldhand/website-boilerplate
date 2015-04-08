@@ -72,6 +72,18 @@ module.exports = function (grunt) {
 			}
 		},
 		
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {
+					'minified-html/index.html': 'index.html'
+				}
+			}
+		},
+		
 		watch: {
             options: {
                 livereload: true
