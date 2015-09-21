@@ -7,7 +7,6 @@
 		"grunt": "*",
 		"grunt-autoprefixer": "*",
 		"grunt-contrib-connect": "*",
-		"grunt-contrib-imagemin": "*",
 		"grunt-contrib-sass": "*",
 		"grunt-contrib-uglify": "*",
 		"grunt-contrib-watch": "*",
